@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= 'Error!!'
+  h3= message
+  h4= error.status
+  if scope
+    h5= scope
+  //pre #{error.stack}
+  a(class='button', href='/') Home

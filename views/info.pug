@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  a(class='button', href='/logout') Logout
+  |
+  |
+  h1 User Info:
+  |
+  p #{user.first_name} #{user.last_name} (id: #{user.id})
+  |
+  |
+  h4 email accounts:
+  table
+    thead
+      tr
+        th username
+        th server
+        th status
+    tbody
+    each account in user.email_accounts
+      tr
+        td= account.username
+        td= account.server
+        td= account.status
+

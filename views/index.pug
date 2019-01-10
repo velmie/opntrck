@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} Opentrack <> Velmie Project Spec
+  if isAuth !== true
+    a(class='button', href='/login') Login
